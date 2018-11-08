@@ -19,6 +19,7 @@ RSpec.describe 'GITHUB' do
       eyes.check_window('window')
     rescue StandardError => e
       p e.message
+    ensure 
       eyes.close
     end
   end 
