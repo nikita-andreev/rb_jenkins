@@ -14,7 +14,7 @@ RSpec.describe 'GITHUB' do
         l.level = Logger::FATAL
       end
     
-      eyes_driver = eyes.open(driver: driver, app_name: 'MS Azure DevOps', test_name: 'Github index page', viewporft_size: {width: 800, height: 600})
+      eyes_driver = eyes.open(driver: driver, app_name: 'MS Azure DevOps', test_name: 'Github index page', viewport_size: {width: 800, height: 600})
       eyes_driver.get('http://github.com')
       eyes.check_window('window')
     rescue StandardError => e
