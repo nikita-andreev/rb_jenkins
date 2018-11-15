@@ -19,6 +19,8 @@ RSpec.describe 'GITHUB' do
       eyes.check_window('window')
       puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
       puts eyes.batch.id
+      puts ENV['APPLITOOLS_BATCH_ID']
+      puts ENV[:APPLITOOLS_BATCH_ID]
     rescue StandardError => e
       p e.message
     ensure 
