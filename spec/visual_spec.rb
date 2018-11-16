@@ -11,7 +11,7 @@ RSpec.describe 'GITHUB' do
       eyes = Applitools::Selenium::Eyes.new
       eyes.api_key = ENV['APPLITOOLS_API_KEY']
       eyes.log_handler = Logger.new(STDOUT).tap do |l|
-        l.level = Logger::FATAL
+        l.level = Logger::DEBUG
       end
     
       eyes_driver = eyes.open(driver: driver, app_name: 'MS Azure DevOps', test_name: 'Github index page', viewport_size: {width: 800, height: 600})
@@ -20,7 +20,6 @@ RSpec.describe 'GITHUB' do
       puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
       puts eyes.batch.id
       puts ENV['APPLITOOLS_BATCH_ID']
-      puts ENV[:APPLITOOLS_BATCH_ID]
     rescue StandardError => e
       p e.message
     ensure 
